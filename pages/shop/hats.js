@@ -1,8 +1,8 @@
 import  Layout from '../../components/layout/Layout';
-import HatsContainer from '../../components/shop/HatsContainer';
+import ItemContainer from '../../components/shop/ItemContainer';
 
 export async function getServerSideProps(){
-    const response = await fetch('https://dry-wave-60207.herokuapp.com/api/shop');
+    const response = await fetch('https://dry-wave-60207.herokuapp.com/api/shop/hats');
     const categories = await response.json();
 
     return{
@@ -17,7 +17,7 @@ export default function Home({categories}) {
   return (
       
     <Layout>
-      <HatsContainer key={categories[0].cid} categories={categories} />
+      <ItemContainer key={categories[0].cid} categories={categories} Title="Hats" />
     </Layout>
   )
 }

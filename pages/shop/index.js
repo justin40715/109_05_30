@@ -16,7 +16,7 @@ export default function Home({categories}) {
   console.log('index',categories);
   return (
     <Layout>
-      <ShopContainer key={categories[0].cid} categories={categories} />
+      <ShopContainer key={categories[0].cid} categories={categories} Title="Shops"/>
     </Layout>
   )
 }

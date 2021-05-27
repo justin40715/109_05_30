@@ -1,212 +1,153 @@
-/* RESET */
-// // * {
-// //     margin: 0;
-// //     padding: 0;
-// //     box-sizing: border-box;
-// //   }
-
-// //   body {
-// //     background: #ebecf0;
-// //     font-family: "Open Sans", sans-serif;
-// //     min-height: 100vh;
-
-// //     a {
-// //       text-decoration: none;
-// //       color: #172b4d;
-// //     }
-
-// //     h1 {
-// //       font-family: "Song Myung", serif;
-// //     }
-// //   }
-
-//   /* DEFAULT STYLE */
-// //   :root {
-// //     font-size: 16px;
-// //     --card-img-height: 200px;
-// //   }
-.card_container {
-  width: 100%;
-  height: 100vh;
-//   display: flex;
-//   flex-flow: row wrap;
-//   justify-content: center;
-  align-items: center;
-  transition: all 200ms ease-in-out;
-  
+.cards_list {
+  // z-index: 0;
+  width: 25%;
+  // display: flex;
+  // flex-wrap: unset;
+  margin: 1rem;
 }
 
 .card {
-  align-self: flex-start;
-  position: relative;
-  width: 325px;
-  min-width: 275px;
-  margin: 1.25rem 0.75rem;
-  background: white;
-  transition: all 300ms ease-in-out;
-
-//   .card_img {
-//       visibility: hidden;
-//     //   width: 100%;
-//     //   height: var(--card-img-height);
-//     //   background-repeat: no-repeat;
-//     //   background-position: center center;
-//     //   background-size: cover;
-// //     position: relative;
-// //     left: 10%;
-//     width: 200px;
-//     height: 200px;
-// //     border: 1px solid black;
-// //     margin: 0px 10px 0px 10px;
-// //     overflow: hidden;
-//   }
-
-  #image {
-    transition: transform 1s ease;
-    width: 200px;
-    height: 300px;
+  span {
+    font-size: 20px;
   }
-
-  .card_img_hovered {
-    --card-img-hovered-overlay: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0)
-    );
-    transition: all 350ms ease-in-out;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    position: absolute;
-    height: var(--card-img-height);
-    top: 0;
+  p {
+    // display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
   }
+  margin: 30px auto;
+  width: 350px;
+  height: 350px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  color: cornsilk;
+}
 
-  .card_info {
-    position: relative;
-    padding: 0.75rem 1.25rem;
-    transition: all 200ms ease-in-out;
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
 
-    .card_about {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.75rem 0;
-      transition: all 200ms ease-in-out;
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
 
-      .card_tag {
-        width: 60px;
-        max-width: 100px;
-        padding: 0.2rem 0.5rem;
-        font-size: 12px;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        background: #505f79;
-        color: #fff;
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
 
-        &.tag_news {
-          background: #36b37e;
-        }
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
 
-        &.tag_deals {
-          background: #ffab00;
-        }
+.title_white {
+  color: white;
+}
 
-        &.tag_politics {
-          width: 71px;
-          background: #ff5630;
-        }
-      }
-    }
+.title_black {
+  color: black;
+}
 
-    .card_title {
-      z-index: 10;
-      font-size: 1.5rem;
-      padding-bottom: 0.75rem;
-      transition: all 350ms ease-in-out;
-    }
-
-    .card_creator {
-      padding-bottom: 0.75rem;
-      transition: all 250ms ease-in-out;
-    }
+@media screen and (max-width: 950px) {
+  .homepage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto
   }
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: 0px 15px 35px rgba(227, 252, 239, 0.1),
-      0px 5px 15px rgba(0, 0, 0, 0.07);
-    transform: scale(1.025);
-
-    .card_img_hovered {
-      --card-img-hovered-overlay: linear_gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.65)
-      );
-      height: 100%;
-    }
-
-    .card_about,
-    .card_creator {
-      opacity: 0;
-    }
-
-    .card_info {
-      background-color: transparent;
-    }
-
-    .card_title {
-      color: #ebecf0;
-      // margin-bottom: -40px;
-      transform: translate(0, 40px);
-    }
+  .cards_list {
+    margin: 3rem;
+    
+  }
+  .products_header__1iU36 {
+    // text-align: center;
+    padding: 6rem 2rem 0 2rem;
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 
-// CARD IMAGES
-.card_1 {
-  .card_img,
-  .card_img_hovered {
-    background-image: var(--card-img-hovered-overlay),
-      url(https://source.unsplash.com/Qm_n6aoYzDs);
+@media screen and (max-width: 830px) {
+  .homepage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto
+  }
+  .cards_list {
+    margin: 7rem 15rem 6rem 1rem;
+  }
+  .products_header__1iU36 {
+    // text-align: center;
+    padding: 6rem 3rem 0 0;
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 
-.card_2 {
-  .card_img,
-  .card_img-hovered {
-    background-image: var(--card-img-hovered-overlay),
-      url(https://source.unsplash.com/C-v1p2DTakA);
-  }
-}
-
-.card_3 {
-  .card-img,
-  .card-img-hovered {
-    background-image: var(--card-img-hovered-overlay),
-      url(https://source.unsplash.com/V0L1LH7qWOQ);
-  }
-}
-
-.card-4 {
-  .card-img,
-  .card-img-hovered {
-    background-image: var(--card-img-hovered-overlay),
-      url(https://source.unsplash.com/zAi2Is48-MA);
-  }
-}
 
 .products_header__1iU36 {
-
-    text-align: center;
-    padding: 3rem 0;
-    }
-
-.homepage {
-    display: flex;
-    flex-wrap: wrap-reverse
+  text-align: center;
+  padding: 6rem 0 0 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+// 分頁
+
+.paginationBttns {
+  width: 100%;
+
+  height: 40px;
+
+  list-style: none;
+
+  display: flex;
+
+  justify-content: center;
+
+  a {
+    padding: 10px;
+
+    margin: 8px;
+
+    border-radius: 5px;
+
+    border: 1px solid grey;
+
+    color: darkblue;
+
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: black;
+
+    background: rgb(4, 230, 211);
+  }
+}
+
+.paginationDisabled a {
+  color: black;
+  background: rgb(0, 78, 196);
+}
