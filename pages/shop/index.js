@@ -2,7 +2,7 @@ import  Layout from '../../components/layout/Layout';
 import ShopContainer from '../../components/shop/ShopContainer';
 
 export async function getServerSideProps(){
-    const response = await fetch('https://dry-wave-60207.herokuapp.com/api/shop');
+    const response = await fetch('https://crownstrapi-0606.herokuapp.com/products');
     const categories = await response.json();
 
     return{
