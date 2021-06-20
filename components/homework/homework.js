@@ -11,8 +11,8 @@ export default function ItemContainer({categories}) {
         <div>
             <h1 className={styles.products_header__1iU36}>作品集</h1>
             <div className={styles.homepage}>
-                {categories.map(({name, remote_url,cid, price})=>(
-                    <Item key={cid} name={name} remote_url={remote_url} price={price} />
+                {categories.map(({name, url, img})=>(
+                    <Item name={name} url={url} img={img}/>
                 ))}
         </div>
         </div>
