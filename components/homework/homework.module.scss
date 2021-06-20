@@ -1,0 +1,154 @@
+.cards_list {
+    // z-index: 0;
+    width: 25%;
+    // display: flex;
+    // flex-wrap: unset;
+    margin: 1rem;
+  }
+  
+  .card {
+    span {
+      font-size: 20px;
+    }
+    p {
+      // display: block;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+    margin: 30px auto;
+    width: 350px;
+    height: 350px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+      -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+    color: cornsilk;
+  }
+  
+  .card .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+  }
+  
+  .card .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+  }
+  
+  .card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+  }
+  
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+      -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  }
+  
+  .title_white {
+    color: white;
+  }
+  
+  .title_black {
+    color: black;
+  }
+  
+  @media screen and (max-width: 950px) {
+    .homepage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: auto
+    }
+    .cards_list {
+      margin: 3rem;
+      
+    }
+    .products_header__1iU36 {
+      // text-align: center;
+      padding: 6rem 2rem 0 2rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+  
+  @media screen and (max-width: 830px) {
+    .homepage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: auto
+    }
+    .cards_list {
+      margin: 7rem 15rem 6rem 1rem;
+    }
+    .products_header__1iU36 {
+      // text-align: center;
+      padding: 6rem 3rem 0 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+  
+  
+  .products_header__1iU36 {
+    text-align: center;
+    padding: 6rem 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .homepage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  // 分頁
+  
+  .paginationBttns {
+    width: 100%;
+  
+    height: 40px;
+  
+    list-style: none;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    a {
+      padding: 10px;
+  
+      margin: 8px;
+  
+      border-radius: 5px;
+  
+      border: 1px solid grey;
+  
+      color: darkblue;
+  
+      cursor: pointer;
+    }
+  
+    a:hover {
+      color: black;
+  
+      background: rgb(4, 230, 211);
+    }
+  }
+  
+  .paginationDisabled a {
+    color: black;
+    background: rgb(0, 78, 196);
+  }
+  

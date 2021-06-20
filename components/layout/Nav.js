@@ -12,6 +12,9 @@ export default function Nav() {
               <img src='/favicon.svg' alt='' />
             </Link>
           </li>
+          <li className={styles.nav__listItem}>
+            <Link href='/homework'>作品集</Link>
+          </li>
 
           <li className={styles.nav__listItem}>
             <Link href='/'>Home</Link>
